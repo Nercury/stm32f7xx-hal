@@ -81,38 +81,29 @@ pub use stm32f7::stm32f7x9 as device;
 #[cfg(feature = "rt")]
 pub use crate::device::interrupt;
 
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod delay;
 
 // Remove unexpected module
 // #[cfg(feature = "doc")]
 // pub mod examples;
 
-#[cfg(feature = "stm32f746")]
-pub mod dma;
-
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod gpio;
 
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod prelude;
 
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod rcc;
 
-#[cfg(feature = "stm32f746")]
-pub mod serial;
-
-#[cfg(feature = "stm32f746")]
-pub mod spi;
-
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod time;
 
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod timer;
 
-#[cfg(feature = "stm32f746")]
+#[cfg(any(feature = "stm32f746", feature = "stm32f767"))]
 pub mod signature;
 
 pub mod state {
